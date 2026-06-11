@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공덕 마사지 블로그 | 프리미엄 힐링 이야기</title>
+    <meta name="description" content="공덕 마사지의 모든 것, 진짜 힐링을 위한 꿀팁과 이벤트 소식까지. 당신의 하루를 바꾸는 특별한 시간. 010-6279-0862">
+    <meta name="keywords" content="공덕 마사지, 공덕 마사지 블로그, 공덕 스웨디시, 공덕 림프 마사지, 마사지 후기, 공덕 힐링">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-ivory-ink">
+    <link rel="canonical" href="https://t3b07-gd-massage-evt.vercel.app/blog">
+    <!-- OG 메타 -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="공덕 마사지 블로그 | 진짜 힐링을 위한 이야기">
+    <meta property="og:description" content="직장인들의 피로를 풀어주는 공덕 마사지 꿀팁, 이벤트 소식까지 한 번에!">
+    <style>
+        /* === RESET & BASE === */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2d2d2d;
+            background-color: #faf8f5;
+            overflow-x: hidden;
+        }
+
+        /* === TYPOGRAPHY === */
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            color: #3a3a3a;
+        }
+
+        a {
+            color: #8b6f4e;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #6b4f2e;
+        }
+
+        .dropcap::first-letter {
+            float: left;
+            font-size: 3.5em;
+            line-height: 0.8;
+            font-weight: 700;
+            margin-right: 0.15em;
+            color: #8b6f4e;
+        }
+
+        /* === LAYOUT === */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* === HEADER & NAV === */
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e8e0d6;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo a {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2d2d2d;
+            letter-spacing: -0.03em;
+        }
+
+        .logo a:hover {
+            color: #8b6f4e;
+        }
+
+        .logo span {
+            color: #8b6f4e;
+        }
+
+        /* 네비게이션 */
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links li a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #4a4a4a;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: #8b6f4e;
+            border-bottom-color: #8b6f4e;
+        }
+
+        .nav-links li a.tel-link {
+            background: #8b6f4e;
+            color: #ffffff !important;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            border-bottom: none;
+            font-weight: 600;
+        }
+
+        .nav-links li a.tel-link:hover {
+            background: #6b4f2e;
+            transform: scale(1.02);
+        }
+
+        /* 햄버거 메뉴 */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            padding: 5px;
+            background: none;
+            border: none;
+        }
+
+        .hamburger-menu span {
+            display: block;
+            width: 26px;
+            height: 2.5px;
+            background: #2d2d2d;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        /* === HERO SECTION === */
+        .hero {
+            padding: 4rem 0 3rem;
+            text-align: center;
+            background: linear-gradient(135deg, #faf8f5 0%, #f0ebe3 100%);
+        }
+
+        .hero h1 {
+            margin-bottom: 0.8rem;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: #6a6a6a;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* === BLOG POST === */
+        .blog-post {
+            padding: 3rem 0 4rem;
+        }
+
+        .blog-post .container {
+            max-width: 800px;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            color: #8a8a8a;
+            font-size: 0.9rem;
+        }
+
+        .post-meta .tag {
+            background: #e8e0d6;
+            padding: 0.2rem 1rem;
+            border-radius: 50px;
+            color: #5a4a3a;
+            font-weight: 500;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #d4c9b8, #c4b4a0);
+            border-radius: 16px;
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #5a4a3a;
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
+
+        .post-content {
+            font-size: 1.08rem;
+            line-height: 1.8;
+        }
+
+        .post-content h2 {
+            border-left: 4px solid #8b6f4e;
+            padding-left: 1rem;
+        }
+
+        .post-content blockquote {
+            border-left: 3px solid #8b6f4e;
+            padding: 1rem 0 1rem 1.5rem;
+            margin: 1.5rem 0;
+            background: #f5f0ea;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #5a4a3a;
+        }
+
+        .cta-box {
+            background: #f5f0ea;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            margin-top: 0;
+        }
+
+        .cta-box .tel-link {
+            display: inline-block;
+            background: #8b6f4e;
+            color: #ffffff;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .cta-box .tel-link:hover {
+            background: #6b4f2e;
+        }
+
+        /* === FOOTER === */
+        footer {
+            background: #2d2d2d;
+            color: #c4b4a0;
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: #a89888;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: #c4b4a0;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        /* === RESPONSIVE 768 === */
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #ffffff;
+                padding: 1.5rem;
+                box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+                gap: 1rem;
+                border-bottom: 1px solid #e8e0d6;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li a {
+                padding: 0.7rem 0;
+                border-bottom: none;
+                font-size: 1.05rem;
+            }
+
+            .nav-links li a.tel-link {
+                text-align: center;
+                margin-top: 0.5rem;
+            }
+
+            .featured-image {
+                height: 250px;
+            }
+
+            .hero {
+                padding: 2.5rem 0 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="/">공덕<span>마사지</span></a>
+            </div>
+            <nav>
+                <button class="hamburger-menu" aria-label="메뉴 열기" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/event">이벤트</a></li>
+                    <li><a href="/blog" class="active">블로그</a></li>
+                    <li><a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>공덕 마사지 블로그</h1>
+            <p>진짜 힐링을 위한 이야기, 꿀팁 그리고 특별한 이벤트 소식까지</p>
+        </div>
+    </section>
+
+    <section class="blog-post">
+        <div class="container">
+            <article>
+                <div class="post-meta">
+                    <span class="tag">힐링 꿀팁</span>
+                    <span>2025년 3월 12일</span>
+                    <span>| 5분 읽기</span>
+                </div>
+                <h1>직장인 피로, 공덕 마사지로 풀자! 내가 경험한 진짜 힐링</h1>
+                <div class="featured-image">📸 공덕 마사지 케어 현장</div>
+
+                <div class="post-content">
+                    <p class="dropcap">야, 형. 나 요즘 진짜 미칠 것 같았어. 하루 10시간 이상 책상에 앉아 있으니까 목은 돌아갈 듯 뻐근하고, 어깨는 바위처럼 딱딱해지더라고. 거기다가 다리까지 퉁퉁 붓기 시작하니까 진짜 "아 이대로 가다간 큰일 나겠다" 싶었어.</p>
+
+                    <p>그래서 주변 사람들한테 물어봤지. "야, 공덕 쪽에 괜찮은 마사지샵 없냐?" 하고. 다들 입을 모아 추천하더라고. 그래서 내가 직접 가봤어. 오늘은 그 경험담을 형들한테 솔직하게 풀어볼게.</p>
+
+                    <h2>왜 공덕 마사지여야 하는가?</h2>
+                    <p>사실 처음엔 "마사지가 다 거기서 거기지" 하고 생각했어. 그런데 내가 완전히 착각했더라고. 공덕 쪽 마사지샵들은 진짜 프리미엄급이야. 일단 실내 인테리어부터가 달라. 들어가자마자 은은한 아로마 향이 코를 간질이고, 조명도 너무 부드러워서 긴장이 확 풀리더라고.</p>
+
+                    <p>거기다가 관리사 분들이 진짜 전문적이야. 내가 "요즘 어깨랑 허리가 너무 아파요" 했더니, 딱 봐도 "아, 여기랑 여기가 많이 뭉치셨네요" 하면서 정확하게 짚어주시더라고. 이게 경험의 차이인가 싶었어.</p>
+
+                    <blockquote>
+                        "몸이 보내는 신호를 무시하지 마세요. 한 번의 마사지가 당신의 하루를, 아니 인생을 바꿀 수도 있어요."
+                    </blockquote>
+
+                    <h2>스웨디시 vs 림프 마사지, 뭘 골라야 할까?</h2>
+                    <p>형들, 나도 처음엔 종류가 많아서 헷갈렸어. 그래서 내가 직접 두 가지 다 받아보고 느낀 점을 공유할게.</p>
+
+                    <p><strong>스웨디시 마사지</strong>는 진짜 근육 깊숙이 풀어주는 느낌이야. 오래 앉아 있어서 뻐근한 근육들을 하나하나 풀어주니까 시원하고 개운해. 특히 등 쪽이 진짜 시원했어. 근육이 녹는 느낌? 그걸 진짜 처음 느껴봤다.</p>
+
+                    <p><strong>림프 마사지</strong>는 좀 더 부드럽고 리드미컬한 느낌이야. 몸이 퉁퉁 붓는 편이라면 이걸 강력 추천해. 내가 받아보니까 다리가 확실히 가벼워지더라고. 관리사 분이 "림프 순환이 잘 돼야 노폐물이 배출돼요"라고 설명해주셨는데, 진짜 그 말이 맞는 것 같아.</p>
+
+                    <p>개인적인 추천은? <strong>시간 되면 두 개 다 받아봐</strong>. 근데 한 번에 하나만 받아야 한다면, 요즘처럼 피곤할 때는 스웨디시 먼저 추천할게. 근육이 진짜 시원하게 풀리니까.</p>
+
+                    <h2>이벤트 소식! 이거 놓치면 진짜 후회한다</h2>
+                    <p>야, 그리고 형들한테 진짜 꿀정보 하나 알려줄게. 지금 공덕 마사지 이벤트 중이야. 처음 방문하는 사람들한테 할인도 해주고, 특별 패키지도 있다더라고. 나 같은 경우 첫 방문 때 20% 할인받았어. 완전 대박 아니야?</p>
+
+                    <p>거기다가 친구랑 같이 가면 추가 할인도 있다고 하더라. 나는 다음에 형이랑 같이 가려고 벌써 예약 잡아놨어. ㅋㅋㅋ</p>
+
+                    <div class="cta-box">
+                        <h3>지금 바로 예약하고 특별 할인 받자!</h3>
+                        <p
+</body>
+</html>
