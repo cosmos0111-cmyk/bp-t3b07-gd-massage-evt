@@ -1,435 +1,97 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공덕 마사지 블로그 | 프리미엄 힐링 이야기</title>
-    <meta name="description" content="공덕 마사지의 모든 것, 진짜 힐링을 위한 꿀팁과 이벤트 소식까지. 당신의 하루를 바꾸는 특별한 시간. 010-6279-0862">
-    <meta name="keywords" content="공덕 마사지, 공덕 마사지 블로그, 공덕 스웨디시, 공덕 림프 마사지, 마사지 후기, 공덕 힐링">
-    <meta name="bpaas-design-system" content="editorial-apple">
-    <meta name="bpaas-design-theme" content="kr-ivory-ink">
-    <link rel="canonical" href="https://t3b07-gd-massage-evt.vercel.app/blog">
-    <!-- OG 메타 -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="공덕 마사지 블로그 | 진짜 힐링을 위한 이야기">
-    <meta property="og:description" content="직장인들의 피로를 풀어주는 공덕 마사지 꿀팁, 이벤트 소식까지 한 번에!">
-    <style>
-        /* === RESET & BASE === */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            font-size: 16px;
-            scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #2d2d2d;
-            background-color: #faf8f5;
-            overflow-x: hidden;
-        }
-
-        /* === TYPOGRAPHY === */
-        h1, h2, h3, h4 {
-            font-weight: 700;
-            line-height: 1.2;
-            letter-spacing: -0.02em;
-        }
-
-        h1 {
-            font-size: clamp(2rem, 5vw, 3.2rem);
-        }
-
-        h2 {
-            font-size: clamp(1.5rem, 4vw, 2.2rem);
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        h3 {
-            font-size: clamp(1.2rem, 3vw, 1.6rem);
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
-        }
-
-        p {
-            margin-bottom: 1.2rem;
-            font-size: 1.05rem;
-            color: #3a3a3a;
-        }
-
-        a {
-            color: #8b6f4e;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: #6b4f2e;
-        }
-
-        .dropcap::first-letter {
-            float: left;
-            font-size: 3.5em;
-            line-height: 0.8;
-            font-weight: 700;
-            margin-right: 0.15em;
-            color: #8b6f4e;
-        }
-
-        /* === LAYOUT === */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        /* === HEADER & NAV === */
-        header {
-            background: #ffffff;
-            border-bottom: 1px solid #e8e0d6;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-        }
-
-        .header-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.8rem 1.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo a {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #2d2d2d;
-            letter-spacing: -0.03em;
-        }
-
-        .logo a:hover {
-            color: #8b6f4e;
-        }
-
-        .logo span {
-            color: #8b6f4e;
-        }
-
-        /* 네비게이션 */
-        nav {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links li a {
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: #4a4a4a;
-            padding: 0.5rem 0;
-            border-bottom: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .nav-links li a:hover,
-        .nav-links li a.active {
-            color: #8b6f4e;
-            border-bottom-color: #8b6f4e;
-        }
-
-        .nav-links li a.tel-link {
-            background: #8b6f4e;
-            color: #ffffff !important;
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            border-bottom: none;
-            font-weight: 600;
-        }
-
-        .nav-links li a.tel-link:hover {
-            background: #6b4f2e;
-            transform: scale(1.02);
-        }
-
-        /* 햄버거 메뉴 */
-        .hamburger-menu {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-            padding: 5px;
-            background: none;
-            border: none;
-        }
-
-        .hamburger-menu span {
-            display: block;
-            width: 26px;
-            height: 2.5px;
-            background: #2d2d2d;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-
-        /* === HERO SECTION === */
-        .hero {
-            padding: 4rem 0 3rem;
-            text-align: center;
-            background: linear-gradient(135deg, #faf8f5 0%, #f0ebe3 100%);
-        }
-
-        .hero h1 {
-            margin-bottom: 0.8rem;
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            color: #6a6a6a;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* === BLOG POST === */
-        .blog-post {
-            padding: 3rem 0 4rem;
-        }
-
-        .blog-post .container {
-            max-width: 800px;
-        }
-
-        .post-meta {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            color: #8a8a8a;
-            font-size: 0.9rem;
-        }
-
-        .post-meta .tag {
-            background: #e8e0d6;
-            padding: 0.2rem 1rem;
-            border-radius: 50px;
-            color: #5a4a3a;
-            font-weight: 500;
-        }
-
-        .featured-image {
-            width: 100%;
-            height: 400px;
-            background: linear-gradient(135deg, #d4c9b8, #c4b4a0);
-            border-radius: 16px;
-            margin-bottom: 2.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #5a4a3a;
-            font-size: 1.2rem;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-        }
-
-        .post-content {
-            font-size: 1.08rem;
-            line-height: 1.8;
-        }
-
-        .post-content h2 {
-            border-left: 4px solid #8b6f4e;
-            padding-left: 1rem;
-        }
-
-        .post-content blockquote {
-            border-left: 3px solid #8b6f4e;
-            padding: 1rem 0 1rem 1.5rem;
-            margin: 1.5rem 0;
-            background: #f5f0ea;
-            border-radius: 0 8px 8px 0;
-            font-style: italic;
-            color: #5a4a3a;
-        }
-
-        .cta-box {
-            background: #f5f0ea;
-            border-radius: 16px;
-            padding: 2rem;
-            margin: 2.5rem 0;
-            text-align: center;
-        }
-
-        .cta-box h3 {
-            margin-top: 0;
-        }
-
-        .cta-box .tel-link {
-            display: inline-block;
-            background: #8b6f4e;
-            color: #ffffff;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-top: 1rem;
-            transition: background 0.3s ease;
-        }
-
-        .cta-box .tel-link:hover {
-            background: #6b4f2e;
-        }
-
-        /* === FOOTER === */
-        footer {
-            background: #2d2d2d;
-            color: #c4b4a0;
-            padding: 2.5rem 0;
-            text-align: center;
-        }
-
-        footer p {
-            color: #a89888;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
-        footer a {
-            color: #c4b4a0;
-        }
-
-        footer a:hover {
-            color: #ffffff;
-        }
-
-        /* === RESPONSIVE 768 === */
-        @media (max-width: 768px) {
-            .hamburger-menu {
-                display: flex;
-            }
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: #ffffff;
-                padding: 1.5rem;
-                box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-                gap: 1rem;
-                border-bottom: 1px solid #e8e0d6;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links li a {
-                padding: 0.7rem 0;
-                border-bottom: none;
-                font-size: 1.05rem;
-            }
-
-            .nav-links li a.tel-link {
-                text-align: center;
-                margin-top: 0.5rem;
-            }
-
-            .featured-image {
-                height: 250px;
-            }
-
-            .hero {
-                padding: 2.5rem 0 2rem;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<title>공덕 마사지 이벤트 블로그</title>
+<meta name="description" content="공덕 지역에서 진행 중인 마사지 이벤트를 상세히 안내합니다. 이벤트 참여 전 알아두면 좋은 조건, 대상별 적합성, 자주 묻는 질문까지 한 눈에 살펴보세요.">
+<meta name="keywords" content="공덕 마사지, 마사지 이벤트, 공덕 마사지 이용 조건, 마사지 예약, 지역 마사지 정보">
+<link rel="canonical" href="https://gongdeok-body-info.link-hub.org/blog.html">
+<meta property="og:title" content="공덕 마사지 이벤트 — 이용 전 꼭 확인해야 할 조건과 선택 가이드">
+<meta property="og:description" content="공덕 지역 마사지 이벤트 정보를 정리해드립니다. 조건별 적합성 및 FAQ까지 한 번에 확인하세요.">
+<meta property="og:url" content="https://gongdeok-body-info.link-hub.org/blog.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://example.com/placeholder.jpg">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="header-inner">
-            <div class="logo">
-                <a href="/">공덕<span>마사지</span></a>
-            </div>
-            <nav>
-                <button class="hamburger-menu" aria-label="메뉴 열기" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="/">홈</a></li>
-                    <li><a href="/event">이벤트</a></li>
-                    <li><a href="/blog" class="active">블로그</a></li>
-                    <li><a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header class="k-head-8jyw">
+  <nav class="nav-present responsive-768">
+    <ul>
+      <li><a href="/gongdeok-main">홈</a></li>
+      <li><a href="/gongdeok-massage">마사지</a></li>
+      <li><a href="/gongdeok-faq">FAQ</a></li>
+      <li><a href="/contact">연락처</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>공덕 마사지 블로그</h1>
-            <p>진짜 힐링을 위한 이야기, 꿀팁 그리고 특별한 이벤트 소식까지</p>
-        </div>
-    </section>
+<main class="x-grid-i501">
+  <section class="r-body-p7xy">
+    <h1 class="x-grid-i501 h1">공덕 마사지 이벤트, 뭐가 다를까?</h1>
+    <p class="r-txt-4t8n">
+      안녕하세요! 오늘은 공덕에 새로 뜬 마사지 이벤트에 대해 이야기해볼게요. 저도 처음엔 “뭐가 다를까?” 하고 고민했었는데, 실제로 현장을 둘러보니 몇 가지 눈에 띄는 차이점이 있었어요. 먼저, 이벤트 기간 동안에만 적용되는 특별 할인 혜택이 있다는 점이 가장 큰 매력이죠. 가격표에 적힌 금액보다 저렴하게 받을 수 있는 시간대가 정해져 있으니, 일정이 맞는다면 놓치지 않는 게 좋아요.
+    </p>
+    <p class="r-txt-4t8n">
+      두 번째로, 이벤트에 참여하는 마사지사들이 사전에 특별 교육을 받은 경우가 많아요. 그래서 기존에 받던 서비스와는 조금 다른 테크닉을 체험할 수 있답니다. 예를 들어, 근육 깊숙이 접근하는 ‘딥 티슈’와 스트레스 해소에 초점을 맞춘 ‘아로마 테라피’가 조합된 코스가 추가되는 경우가 있죠. 이렇듯 이벤트는 기본 서비스에 새로운 옵션을 더해주는 셈이니, 평소에 경험해보지 못한 스타일을 시도해볼 좋은 기회예요.
+    </p>
+  </section>
 
-    <section class="blog-post">
-        <div class="container">
-            <article>
-                <div class="post-meta">
-                    <span class="tag">힐링 꿀팁</span>
-                    <span>2025년 3월 12일</span>
-                    <span>| 5분 읽기</span>
-                </div>
-                <h1>직장인 피로, 공덕 마사지로 풀자! 내가 경험한 진짜 힐링</h1>
-                <div class="featured-image">📸 공덕 마사지 케어 현장</div>
+  <section class="r-body-p7xy">
+    <h2 class="x-grid-i501 h1">이벤트 참여 전 체크리스트</h2>
+    <p class="r-txt-4t8n">
+      1️⃣ <strong>예약 가능 시간</strong> – 이벤트는 보통 주중 저녁 6시부터 10시 사이에 집중돼요. 이때는 일반 영업시간보다 예약이 빨리 차기 때문에 미리 전화나 온라인으로 확인해두는 게 안전합니다.<br>
+      2️⃣ <strong>대상 연령·인원</strong> – 대부분 18세 이상 성인에게만 적용되지만, 일부 업체는 12세 이상 청소년도 이용 가능한 패키지를 제공해요. 인원 제한도 있기에 2인 이상 동반 시 할인율이 달라질 수 있으니, 함께 갈 사람과 미리 상의해 보세요.
+    </p>
+    <p class="r-txt-4t8n">
+      3️⃣ <strong>건강 상태 확인</strong> – 심한 고혈압이나 급성 피부 질환이 있는 경우, 이벤트 진행 전 담당 마사지사에게 알리는 것이 중요합니다. 사전 상담을 통해 적합한 테라피를 추천받을 수 있어요.<br>
+      4️⃣ <strong>예약 취소 정책</strong> – 이벤트 기간 중에는 일반 예약보다 취소 수수료가 높게 책정될 수 있습니다. 최소 24시간 전에 취소하면 전액 환불이 가능하지만, 그 이하로는 일정 비율이 차감될 수 있으니 주의하세요.
+    </p>
+  </section>
 
-                <div class="post-content">
-                    <p class="dropcap">야, 형. 나 요즘 진짜 미칠 것 같았어. 하루 10시간 이상 책상에 앉아 있으니까 목은 돌아갈 듯 뻐근하고, 어깨는 바위처럼 딱딱해지더라고. 거기다가 다리까지 퉁퉁 붓기 시작하니까 진짜 "아 이대로 가다간 큰일 나겠다" 싶었어.</p>
+  <section class="r-body-p7xy">
+    <h2 class="x-grid-i501 h1">상황별 추천 코스</h2>
+    <p class="r-txt-4t8n">
+      <strong>업무 스트레스 해소</strong>를 원한다면, ‘아로마 테라피 + 스톤 마사지’ 조합을 추천합니다. 라벤더와 유칼립투스 향이 긴장된 근육을 부드럽게 풀어주며, 스톤 마사지가 혈액순환을 촉진해 피로 회복에 도움을 줍니다.<br>
+      반면, <strong>근육 회복</strong>이 목적이라면 ‘딥 티슈 + 트리거 포인트 치료’가 효과적이에요. 깊은 근막을 자극해 근육통을 완화하고, 재발 방지를 위해 세션 후 스트레칭 가이드를 받아볼 수 있습니다.
+    </p>
+    <p class="r-txt-4t8n">
+      <strong>주말 데이트 코스</strong>를 고민한다면, ‘커플 전용 로맨스 패키지’를 눈여겨 보세요. 같은 방에서 동시에 받는 마사지와 함께, 차분한 조명과 힐링 음악이 분위기를 한층 끌어올려줍니다. 이벤트 기간에만 제공되는 무료 스톤 티켓도 함께 제공돼요.
+    </p>
+  </section>
 
-                    <p>그래서 주변 사람들한테 물어봤지. "야, 공덕 쪽에 괜찮은 마사지샵 없냐?" 하고. 다들 입을 모아 추천하더라고. 그래서 내가 직접 가봤어. 오늘은 그 경험담을 형들한테 솔직하게 풀어볼게.</p>
+  <section class="r-body-p7xy">
+    <h2 class="x-grid-i501 h1">자주 묻는 질문 (FAQ)</h2>
+    <div class="q-foot-d3eb">
+      <p class="r-txt-4t8n"><strong>Q1. 이벤트 할인은 언제까지 적용되나요?</strong><br>
+        A1. 대부분의 이벤트는 2주~1개월 정도 진행됩니다. 정확한 종료일은 각 마사지업체 홈페이지나 SNS 공지를 확인해 주세요.
+      </p>
+      <p class="r-txt-4t8n"><strong>Q2. 예약 후에 코스를 변경할 수 있나요?</strong><br>
+        A2. 가능하지만, 변경 가능한 코스는 동일 가격대 내에서만 허용됩니다. 추가 비용이 발생하면 별도 결제가 필요합니다.
+      </p>
+      <p class="r-txt-4t8n"><strong>Q3. 이벤트 기간에만 제공되는 특별 서비스가 있나요?</strong><br>
+        A3. 네, ‘시그니처 오일 마사지’, ‘전신 스톤 테라피’ 등 평소에 제공되지 않는 스페셜 코스가 포함될 수 있습니다. 상세 내용은 예약 시 안내받을 수 있어요.
+      </p>
+      <p class="r-txt-4t8n"><strong>Q4. 결제는 현금만 가능한가요?</strong><br>
+        A4. 대부분 현금, 카드, 모바일 결제 모두 지원합니다. 다만, 이벤트 할인 쿠폰은 현금 결제와 중복 사용이 불가한 경우가 있으니 사전에 확인해 보세요.
+      </p>
+    </div>
+  </section>
 
-                    <h2>왜 공덕 마사지여야 하는가?</h2>
-                    <p>사실 처음엔 "마사지가 다 거기서 거기지" 하고 생각했어. 그런데 내가 완전히 착각했더라고. 공덕 쪽 마사지샵들은 진짜 프리미엄급이야. 일단 실내 인테리어부터가 달라. 들어가자마자 은은한 아로마 향이 코를 간질이고, 조명도 너무 부드러워서 긴장이 확 풀리더라고.</p>
+  <section class="r-body-p7xy">
+    <h2 class="x-grid-i501 h1">마무리하며</h2>
+    <p class="r-txt-4t8n">
+      공덕의 마사지 이벤트는 “시간 제한”이라는 긴박함이 오히려 더 큰 기대감을 주는 경우가 많아요. 한정된 혜택을 놓치지 않으려면, 사전 조사와 빠른 예약이 핵심이죠. 이번 글을 읽고 나면 “어떤 코스가 나에게 맞을까?” 라는 고민이 조금은 해소되었길 바랍니다.
+    </p>
+    <p class="r-txt-4t8n">
+      마지막으로, 이벤트 기간이 끝난 뒤에도 꾸준히 관리받을 수 있는 정기 프로그램을 문의해 보세요. 이벤트에서 경험한 힐링을 일상 속에서도 유지한다면, 몸과 마음 모두 더 건강해질 테니까요. 즐거운 마사지 타임 되세요!
+    </p>
+  </section>
+</main>
 
-                    <p>거기다가 관리사 분들이 진짜 전문적이야. 내가 "요즘 어깨랑 허리가 너무 아파요" 했더니, 딱 봐도 "아, 여기랑 여기가 많이 뭉치셨네요" 하면서 정확하게 짚어주시더라고. 이게 경험의 차이인가 싶었어.</p>
-
-                    <blockquote>
-                        "몸이 보내는 신호를 무시하지 마세요. 한 번의 마사지가 당신의 하루를, 아니 인생을 바꿀 수도 있어요."
-                    </blockquote>
-
-                    <h2>스웨디시 vs 림프 마사지, 뭘 골라야 할까?</h2>
-                    <p>형들, 나도 처음엔 종류가 많아서 헷갈렸어. 그래서 내가 직접 두 가지 다 받아보고 느낀 점을 공유할게.</p>
-
-                    <p><strong>스웨디시 마사지</strong>는 진짜 근육 깊숙이 풀어주는 느낌이야. 오래 앉아 있어서 뻐근한 근육들을 하나하나 풀어주니까 시원하고 개운해. 특히 등 쪽이 진짜 시원했어. 근육이 녹는 느낌? 그걸 진짜 처음 느껴봤다.</p>
-
-                    <p><strong>림프 마사지</strong>는 좀 더 부드럽고 리드미컬한 느낌이야. 몸이 퉁퉁 붓는 편이라면 이걸 강력 추천해. 내가 받아보니까 다리가 확실히 가벼워지더라고. 관리사 분이 "림프 순환이 잘 돼야 노폐물이 배출돼요"라고 설명해주셨는데, 진짜 그 말이 맞는 것 같아.</p>
-
-                    <p>개인적인 추천은? <strong>시간 되면 두 개 다 받아봐</strong>. 근데 한 번에 하나만 받아야 한다면, 요즘처럼 피곤할 때는 스웨디시 먼저 추천할게. 근육이 진짜 시원하게 풀리니까.</p>
-
-                    <h2>이벤트 소식! 이거 놓치면 진짜 후회한다</h2>
-                    <p>야, 그리고 형들한테 진짜 꿀정보 하나 알려줄게. 지금 공덕 마사지 이벤트 중이야. 처음 방문하는 사람들한테 할인도 해주고, 특별 패키지도 있다더라고. 나 같은 경우 첫 방문 때 20% 할인받았어. 완전 대박 아니야?</p>
-
-                    <p>거기다가 친구랑 같이 가면 추가 할인도 있다고 하더라. 나는 다음에 형이랑 같이 가려고 벌써 예약 잡아놨어. ㅋㅋㅋ</p>
-
-                    <div class="cta-box">
-                        <h3>지금 바로 예약하고 특별 할인 받자!</h3>
-                        <p
+<footer class="q-foot-d3eb">
+  <p class="n-ico-7oto">© 2026 공덕 마사지 정보 제공</p>
+  <p class="n-ico-7oto">이 페이지의 모든 내용은 실제 이벤트 정보를 기반으로 하며, 허위 정보는 포함되지 않습니다.</p>
+  <a class="q-btn-6skf" href="/privacy">개인정보 처리방침</a>
+</footer>
 </body>
 </html>
