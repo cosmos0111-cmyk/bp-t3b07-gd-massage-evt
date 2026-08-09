@@ -1,212 +1,210 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공덕 마사지 이벤트 정보 | 프리미엄 케어 안내</title>
-    <meta name="description" content="공덕 마사지 이벤트 상세 정보, 프리미엄 케어의 모든 것. 당신의 하루를 바꾸는 특별한 시간, 지금 바로 예약하세요. 010-6279-0862">
-    <meta name="keywords" content="공덕 마사지, 공덕 마사지 이벤트, 공덕 스웨디시, 공덕 림프 마사지, 마사지 할인, 공덕 힐링">
-    <meta name="bpaas-design-system" content="editorial-apple">
-    <meta name="bpaas-design-theme" content="kr-ivory-ink">
-    <link rel="canonical" href="https://gongdeok-body-info.link-hub.org/about.html">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="공덕 마사지 이벤트 정보 | 프리미엄 케어 안내">
-    <meta property="og:description" content="공덕 마사지 이벤트 상세 정보, 프리미엄 케어의 모든 것. 당신의 하루를 바꾸는 특별한 시간, 지금 바로 예약하세요. 010-6279-0862">
-    <style>
-        /* === RESET & BASE === */
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; font-size: 16px; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #faf8f5; color: #2c2c2c; line-height: 1.7; }
-        
-        /* === TYPOGRAPHY === */
-        h1, h2, h3, h4 { font-weight: 600; letter-spacing: -0.02em; line-height: 1.3; }
-        h1 { font-size: 2.8rem; margin-bottom: 1.2rem; color: #1a1a1a; }
-        h2 { font-size: 2.2rem; margin-bottom: 1rem; color: #222; }
-        h3 { font-size: 1.6rem; margin-bottom: 0.8rem; color: #333; }
-        p { margin-bottom: 1.2rem; font-size: 1.05rem; color: #444; }
-        a { color: #8b6f4e; text-decoration: none; transition: color 0.2s; }
-        a:hover { color: #5a3d2b; }
-        .dropcap::first-letter { font-size: 3.5rem; float: left; padding-right: 0.5rem; font-weight: 700; color: #8b6f4e; line-height: 1; }
-        
-        /* === LAYOUT === */
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        
-        /* === HEADER & NAV === */
-        header { background: #fff; border-bottom: 1px solid #e8e3dc; position: sticky; top: 0; z-index: 100; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; max-width: 1200px; margin: 0 auto; }
-        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-        .nav-links a { font-size: 1rem; font-weight: 500; color: #2c2c2c; }
-        .nav-links a:hover { color: #8b6f4e; }
-        .tel-link { background: #8b6f4e; color: #fff !important; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 600; }
-        .tel-link:hover { background: #5a3d2b; color: #fff !important; }
-        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
-        .hamburger span { width: 28px; height: 3px; background: #2c2c2c; border-radius: 3px; }
-        
-        /* === HERO === */
-        .hero { padding: 5rem 0 3rem; text-align: center; }
-        .hero h1 { font-size: 3.2rem; }
-        .hero p { font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto 2rem; }
-        
-        /* === SECTIONS === */
-        .section { padding: 4rem 0; }
-        .section-alt { background: #f4f0ea; }
-        
-        /* === CARDS === */
-        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .card { background: #fff; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e8e3dc; transition: transform 0.2s; }
-        .card:hover { transform: translateY(-4px); }
-        .card h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
-        .card p { font-size: 0.95rem; color: #555; }
-        .card .price { font-size: 1.8rem; font-weight: 700; color: #8b6f4e; margin: 1rem 0; }
-        
-        /* === FAQ === */
-        .faq-item { border-bottom: 1px solid #e8e3dc; padding: 1.5rem 0; }
-        .faq-item h4 { font-size: 1.2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-        .faq-item p { margin-top: 1rem; display: none; }
-        .faq-item.active p { display: block; }
-        
-        /* === CTA === */
-        .cta { background: #2c2c2c; color: #fff; padding: 4rem 0; text-align: center; }
-        .cta h2 { color: #fff; }
-        .cta p { color: #ccc; }
-        .cta .tel-link { display: inline-block; margin-top: 1.5rem; font-size: 1.2rem; padding: 1rem 2.5rem; }
-        
-        /* === FOOTER === */
-        footer { background: #1a1a1a; color: #999; padding: 3rem 0; text-align: center; font-size: 0.9rem; }
-        footer a { color: #ccc; }
-        
-        /* === RESPONSIVE === */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.2rem; }
-            h2 { font-size: 1.8rem; }
-            .hero h1 { font-size: 2.4rem; }
-            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #fff; padding: 1.5rem; border-bottom: 1px solid #e8e3dc; }
-            .nav-links.active { display: flex; }
-            .hamburger { display: flex; }
-            .container { padding: 0 1.2rem; }
-            .card-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>공덕 마사지 이벤트 정보 | 프리미엄 케어 안내</title>
+ <meta name="description" content="공덕 마사지 이벤트 상세 정보, 프리미엄 케어의 모든 것. 당신의 하루를 바꾸는 특별한 시간, 지금 바로 예약하세요.">
+ <meta name="keywords" content="공덕 마사지, 공덕 마사지 이벤트, 공덕 스웨디시, 공덕 림프 마사지, 마사지 할인, 공덕 힐링">
+ <link rel="canonical" href="https://gongdeok-body-info.link-hub.org/about.html">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="공덕 마사지 이벤트 정보 | 프리미엄 케어 안내">
+ <meta property="og:description" content="공덕 마사지 이벤트 상세 정보, 프리미엄 케어의 모든 것. 당신의 하루를 바꾸는 특별한 시간, 지금 바로 예약하세요.">
+ <style>
+ /* === RESET & BASE === */
+ *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+ html { scroll-behavior: smooth; font-size: 16px; }
+ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #faf8f5; color: #2c2c2c; line-height: 1.7; }
+ 
+ /* === TYPOGRAPHY === */
+ h1, h2, h3, h4 { font-weight: 600; letter-spacing: -0.02em; line-height: 1.3; }
+ h1 { font-size: 2.8rem; margin-bottom: 1.2rem; color: #1a1a1a; }
+ h2 { font-size: 2.2rem; margin-bottom: 1rem; color: #222; }
+ h3 { font-size: 1.6rem; margin-bottom: 0.8rem; color: #333; }
+ p { margin-bottom: 1.2rem; font-size: 1.05rem; color: #444; }
+ a { color: #8b6f4e; text-decoration: none; transition: color 0.2s; }
+ a:hover { color: #5a3d2b; }
+ .dropcap::first-letter { font-size: 3.5rem; float: left; padding-right: 0.5rem; font-weight: 700; color: #8b6f4e; line-height: 1; }
+ 
+ /* === LAYOUT === */
+ .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+ 
+ /* === HEADER & NAV === */
+ header { background: #fff; border-bottom: 1px solid #e8e3dc; position: sticky; top: 0; z-index: 100; }
+ nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; max-width: 1200px; margin: 0 auto; }
+ .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+ .nav-links a { font-size: 1rem; font-weight: 500; color: #2c2c2c; }
+ .nav-links a:hover { color: #8b6f4e; }
+ .tel-link { background: #8b6f4e; color: #fff !important; padding: 0.5rem 1.2rem; border-radius: 30px; font-weight: 600; }
+ .tel-link:hover { background: #5a3d2b; color: #fff !important; }
+ .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+ .hamburger span { width: 28px; height: 3px; background: #2c2c2c; border-radius: 3px; }
+ 
+ /* === HERO === */
+ .hero { padding: 5rem 0 3rem; text-align: center; }
+ .hero h1 { font-size: 3.2rem; }
+ .hero p { font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto 2rem; }
+ 
+ /* === SECTIONS === */
+ .section { padding: 4rem 0; }
+ .section-alt { background: #f4f0ea; }
+ 
+ /* === CARDS === */
+ .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+ .card { background: #fff; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #e8e3dc; transition: transform 0.2s; }
+ .card:hover { transform: translateY(-4px); }
+ .card h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+ .card p { font-size: 0.95rem; color: #555; }
+ .card .price { font-size: 1.8rem; font-weight: 700; color: #8b6f4e; margin: 1rem 0; }
+ 
+ /* === FAQ === */
+ .faq-item { border-bottom: 1px solid #e8e3dc; padding: 1.5rem 0; }
+ .faq-item h4 { font-size: 1.2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+ .faq-item p { margin-top: 1rem; display: none; }
+ .faq-item.active p { display: block; }
+ 
+ /* === CTA === */
+ .cta { background: #2c2c2c; color: #fff; padding: 4rem 0; text-align: center; }
+ .cta h2 { color: #fff; }
+ .cta p { color: #ccc; }
+ .cta .tel-link { display: inline-block; margin-top: 1.5rem; font-size: 1.2rem; padding: 1rem 2.5rem; }
+ 
+ /* === FOOTER === */
+ footer { background: #1a1a1a; color: #999; padding: 3rem 0; text-align: center; font-size: 0.9rem; }
+ footer a { color: #ccc; }
+ 
+ /* === RESPONSIVE === */
+ @media (max-width: 768px) {
+ h1 { font-size: 2.2rem; }
+ h2 { font-size: 1.8rem; }
+ .hero h1 { font-size: 2.4rem; }
+ .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #fff; padding: 1.5rem; border-bottom: 1px solid #e8e3dc; }
+ .nav-links.active { display: flex; }
+ .hamburger { display: flex; }
+ .container { padding: 0 1.2rem; }
+ .card-grid { grid-template-columns: 1fr; }
+ }
+ </style>
   <meta property="og:url" content="https://gongdeok-body-info.link-hub.org/about.html">
   <meta name="twitter:card" content="summary">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" style="font-weight: 700; font-size: 1.2rem; color: #2c2c2c;">공덕마사지</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="/">홈</a></li>
-                <li><a href="/info">정보</a></li>
-                <li><a href="/event">이벤트</a></li>
-                <li><a href="/review">후기</a></li>
-                <li><a href="tel:01062790862" class="tel-link">010-6279-0862</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
+ <header>
+ <nav>
+ <a href="/" style="font-weight: 700; font-size: 1.2rem; color: #2c2c2c;">공덕마사지</a>
+ <ul class="nav-links" id="navLinks">
+ <li><a href="/">홈</a></li>
+ <li><a href="/info">정보</a></li>
+ <li><a href="/event">이벤트</a></li>
+ <li><a href="/review">후기</a></li>
+ 
+ </ul>
+ <div class="hamburger" id="hamburger">
+ 
+ 
+ 
+ </div>
+ </nav>
+ </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>공덕 마사지, <br>완벽한 정보의 모든 것</h1>
-            <p>형, 여기 공덕에서 진짜 프리미엄 마사지 정보 다 모았어. 내가 직접 경험하고 추천하는 코스, 분위기, 팁까지 싹 다 알려줄게. 부담 없이 읽어봐.</p>
-        </div>
-    </section>
+ <section class="hero">
+ <div class="container">
+ <h1>공덕 마사지, <br>완벽한 정보의 모든 것</h1>
+ <p>형, 여기 공덕에서 진짜 프리미엄 마사지 정보 다 모았어. 내가 직접 경험하고 추천하는 코스, 분위기, 팁까지 싹 다 알려줄게. 부담 없이 읽어봐.</p>
+ </div>
+ </section>
 
-    <section class="section section-alt">
-        <div class="container">
-            <h2>여기가 바로 그곳, 공덕 프리미엄 마사지</h2>
-            <p class="dropcap">공덕역 3번 출구에서 걸어서 3분, 조용한 골목에 자리 잡은 이곳은 처음 오는 사람도 반할 수밖에 없는 분위기를 자랑해. 인테리어부터가 다르다니까? 어두운 조명, 은은한 아로마 향, 그리고 잔잔한 재즈 음악까지... 들어서는 순간부터 힐링 모드로 전환되는 기분이야.</p>
-            <p>내가 여기 처음 왔을 때가 생각나. 퇴근하고 완전 지친 상태였는데, "형, 오늘은 진짜 풀어줄게" 하면서 맞아주는 관리사님의 말투 하나하나가 프로페셔널했어. 그래서 지금은 단골이 됐지 뭐야. 형들도 한 번 오면 알게 될 거야, 왜 여기가 핫한지.</p>
-        </div>
-    </section>
+ <section class="section section-alt">
+ <div class="container">
+ <h2>여기가 바로 그곳, 공덕 프리미엄 마사지</h2>
+ <p class="dropcap">공덕역 3번 출구에서 걸어서 3분, 조용한 골목에 자리 잡은 이곳은 처음 오는 사람도 반할 수밖에 없는 분위기를 자랑해. 인테리어부터가 다르다니까? 어두운 조명, 은은한 아로마 향, 그리고 잔잔한 재즈 음악까지.. 들어서는 순간부터 힐링 모드로 전환되는 기분이야.</p>
+ <p>내가 여기 처음 왔을 때가 생각나. 퇴근하고 완전 지친 상태였는데, "형, 오늘은 진짜 풀어줄게" 하면서 맞아주는 관리사님의 말투 하나하나가 프로페셔널했어. 그래서 지금은 단골이 됐지 뭐야. 형들도 한 번 오면 알게 될 거야, 왜 여기가 핫한지.</p>
+ </div>
+ </section>
 
-    <section class="section">
-        <div class="container">
-            <h2>추천 코스, 가격까지 싹 공개</h2>
-            <p>솔직히 말해서 마사지 가격이 만만한 건 아니잖아? 근데 여기는 진짜 합리적이면서도 퀄리티는 끝장나. 내가 직접 경험한 코스들 가져왔어. 한 번 보시라.</p>
-            <div class="card-grid">
-                <div class="card">
-                    <h3>스웨디시 전신 마사지</h3>
-                    <p>부드럽지만 깊이 있는 압으로 전신의 피로를 싹 풀어줘. 처음이면 이걸로 시작해, 후회 없어.</p>
-                    <div class="price">60분 / 70,000원</div>
-                </div>
-                <div class="card">
-                    <h3>림프 마사지</h3>
-                    <p>붓기 빼는 데 진짜 효과 좋아. 나도 야근하면 얼굴이 퉁퉁 붓는데, 한 번 받고 나면 다음 날 아침이 다르더라.</p>
-                    <div class="price">60분 / 75,000원</div>
-                </div>
-                <div class="card">
-                    <h3>타이 마사지</h3>
-                    <p>몸이 뻣뻣한 형들한테 강추. 스트레칭과 압을 동시에 해주는데, 받고 나면 키가 2cm는 큰 기분이야.</p>
-                    <div class="price">60분 / 80,000원</div>
-                </div>
-            </div>
-        </div>
-    </section>
+ <section class="section">
+ <div class="container">
+ <h2>추천 코스, 가격까지 싹 공개</h2>
+ <p>솔직히 말해서 마사지 가격이 만만한 건 아니잖아? 근데 여기는 진짜 합리적이면서도 퀄리티는 끝장나. 내가 직접 경험한 코스들 가져왔어. 한 번 보시라.</p>
+ <div class="card-grid">
+ <div class="card">
+ <h3>스웨디시 전신 마사지</h3>
+ <p>부드럽지만 깊이 있는 압으로 전신의 피로를 싹 풀어줘. 처음이면 이걸로 시작해, 후회 없어.</p>
+ <div class="price">60분 / 70,000원</div>
+ </div>
+ <div class="card">
+ <h3>림프 마사지</h3>
+ <p>붓기 빼는 데 진짜 효과 좋아. 나도 야근하면 얼굴이 퉁퉁 붓는데, 한 번 받고 나면 다음 날 아침이 다르더라.</p>
+ <div class="price">60분 / 75,000원</div>
+ </div>
+ <div class="card">
+ <h3>타이 마사지</h3>
+ <p>몸이 뻣뻣한 형들한테 강추. 스트레칭과 압을 동시에 해주는데, 받고 나면 키가 2cm는 큰 기분이야.</p>
+ <div class="price">60분 / 80,000원</div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <section class="section section-alt">
-        <div class="container">
-            <h2>여기만의 특별함, 분위기부터 서비스까지</h2>
-            <p>사실 마사지 기술은 기본이고, 여기는 그 이상을 준비했더라. 내가 가장 좋아하는 건 마사지 끝나고 나오는 수제 허브티야. 직접 우려낸다고 하는데, 마실 때마다 집에 온 느낌이 들어. 게다가 관리사님들이 다들 친절해서 "형, 오늘 어깨 많이 뭉쳤네?" 하면서 맞춤형으로 케어해줘. 이게 진짜 프리미엄이지.</p>
-            <p>그리고 형, 여기 예약 시스템도 완전 편해. 전화 한 통이면 끝이야. 나도 항상 "010-6279-0862"로 바로 전화해서 예약하는데, 늦은 시간에도 친절하게 받아줘. 바쁜 일상 속에서도 힐링 한 방 놓치지 마.</p>
-        </div>
-    </section>
+ <section class="section section-alt">
+ <div class="container">
+ <h2>여기만의 특별함, 분위기부터 서비스까지</h2>
+ <p>사실 마사지 기술은 기본이고, 여기는 그 이상을 준비했더라. 내가 가장 좋아하는 건 마사지 끝나고 나오는 수제 허브티야. 직접 우려낸다고 하는데, 마실 때마다 집에 온 느낌이 들어. 게다가 관리사님들이 다들 친절해서 "형, 오늘 어깨 많이 뭉쳤네?" 하면서 맞춤형으로 케어해줘. 이게 진짜 프리미엄이지.</p>
+ <p>그리고 형, 여기 예약 시스템도 완전 편해. 전화 한 통이면 끝이야. 바쁜 일상 속에서도 힐링 한 방 놓치지 마.</p>
+ </div>
+ </section>
 
-    <section class="section">
-        <div class="container">
-            <h2>자주 묻는 질문, 내가 다 정리했어</h2>
-            <p>처음 오는 형들이 궁금해할 만한 것들 모아봤어. 다 내 경험에서 나온 거니까 믿어도 돼.</p>
-            <div class="faq-item active">
-                <h4>예약은 어떻게 하나요? <span>▼</span></h4>
-                <p>전화가 제일 빠릅니다. 010-6279-0862로 바로 연락 주시면 원하는 시간과 코스를 맞춰줘요. 문자도 가능하니 편한 방법으로 연락하세요.</p>
-            </div>
-            <div class="faq-item">
-                <h4>주차 가능한가요? <span>▼</span></h4>
-                <p>건물 앞에 주차 공간이 2대 있어요. 근데 자리가 많지 않아서 대중교통 추천해요. 공덕역에서 걸어오는 게 속 편합니다.</p>
-            </div>
-            <div class="faq-item">
-                <h4>남자도 괜찮나요? <span>▼</span></h4>
-                <p>당연하죠! 형, 나도 남자고 완전 만족하고 다닙니다. 관리사님들이 성별 관계없이 전문적으로 케어해줘서 전혀 부담 없어요.</p>
-            </div>
-            <div class="faq-item">
-                <h4>이벤트나 할인은 있나요? <span>▼</span></h4>
-                <p>요즘 첫 방문 고객님한테 10% 할인 이벤트 중이에요. 그리고 단골 되면 가끔 서비스도 주니까 자주 오는 게 답입니다.</p>
-            </div>
-        </div>
-    </section>
+ <section class="section">
+ <div class="container">
+ <h2>자주 묻는 질문, 내가 다 정리했어</h2>
+ <p>처음 오는 형들이 궁금해할 만한 것들 모아봤어. 다 내 경험에서 나온 거니까 믿어도 돼.</p>
+ <div class="faq-item active">
+ <h4>예약은 어떻게 하나요? <span>▼</span></h4>
+ <p>전화가 제일 빠릅니다. 문자도 가능하니 편한 방법으로 연락하세요.</p>
+ </div>
+ <div class="faq-item">
+ <h4>주차 가능한가요? <span>▼</span></h4>
+ <p>건물 앞에 주차 공간이 2대 있어요. 근데 자리가 많지 않아서 대중교통 추천해요. 공덕역에서 걸어오는 게 속 편합니다.</p>
+ </div>
+ <div class="faq-item">
+ <h4>남자도 괜찮나요? <span>▼</span></h4>
+ <p>당연하죠! 형, 나도 남자고 완전 만족하고 다닙니다. 관리사님들이 성별 관계없이 전문적으로 케어해줘서 전혀 부담 없어요.</p>
+ </div>
+ <div class="faq-item">
+ <h4>이벤트나 할인은 있나요? <span>▼</span></h4>
+ <p>요즘 첫 방문 고객님한테 10% 할인 이벤트 중이에요. 그리고 단골 되면 가끔 서비스도 주니까 자주 오는 게 답입니다.</p>
+ </div>
+ </div>
+ </section>
 
-    <section class="cta">
-        <div class="container">
-            <h2>지금 바로 예약하고, 특별한 하루를 시작해</h2>
-            <p>형, 더 이상 고민할 시간이 없어. 내가 보증하는 프리미엄 마사지, 전화 한 통이면 바로 예약 완료야.</p>
-            <a href="tel:01062790862" class="tel-link">010-6279-0862</a>
-        </div>
-    </section>
+ <section class="cta">
+ <div class="container">
+ <h2>지금 바로 예약하고, 특별한 하루를 시작해</h2>
+ <p>형, 더 이상 고민할 시간이 없어. 내가 보증하는 프리미엄 마사지, 전화 한 통이면 바로 예약 완료야.</p>
+ 
+ </div>
+ </section>
 
-    <footer>
-        <div class="container">
-            <p>공덕 마사지 이벤트 | 서울 마포구 공덕동 | <a href="tel:01062790862">010-6279-0862</a></p>
-            <p>© 2025 공덕마사지. All rights reserved.</p>
-        </div>
-    </footer>
+ <footer>
+ <div class="container">
+ <p>공덕 마사지 이벤트 | 서울 마포구 공덕동 | </p>
+ <p>© 2025 공덕마사지. All rights reserved.</p>
+ </div>
+ </footer>
 
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+ <script>
+ const hamburger = document.getElementById('hamburger');
+ const navLinks = document.getElementById('navLinks');
+ hamburger.addEventListener('click', () => {
+ navLinks.classList.toggle('active');
+ });
 
-        document.querySelectorAll('.faq-item h4').forEach(item => {
-            item.addEventListener('click', () => {
-                const parent = item.parentElement;
-                parent.classList.toggle('active');
-            });
-        });
-    </script>
+ document.querySelectorAll('.faq-item h4').forEach(item => {
+ item.addEventListener('click', () => {
+ const parent = item.parentElement;
+ parent.classList.toggle('active');
+ });
+ });
+ </script>
 </body>
 </html>
